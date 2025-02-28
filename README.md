@@ -46,61 +46,77 @@ Follow these steps to set up the project on your local machine:
 1. **Clone the repository:**
 
     ```sh
-    https://github.com/kailash-parihar/blogging-platform.git
-    
-    cd bloggingApp
+    git clone https://github.com/kailash-parihar/blogging-platform.git
+    ```
+    ```sh    
+    cd blogging-platform
     ```
    
 2. **Set up environment variables:**
+- Create a .env file in the backend directory and add the following:
     ```sh
-    Create a .env file in the backend directory and add the following:
-
     MONGO_URI=your_mongodb_uri
-
+    ```
+    ```sh
     PORT=5001
-
+    ```
+    ```sh
     JWT_SECRET=your_secret_key
     ```
 
 3. **Install dependencies::**
+    - **Backend :-**
+    ```markdown
+    \blogging-platform\backend>
+    ```
     ```sh
-    Backend:
-
     cd backend
     npm install
     ```
+    - **Frontend :-**
+    ```markdown
+    \blogging-platform\frontend>
     ```
-    Frontend:
-
-    cd ../frontend
+    ```sh
+    cd..
+    cd frontend
     npm install
     ```
 
 4. **Run MongoDB:**
-    - Ensure MongoDB is running on your local machine or use a MongoDB Atlas URI in the .env file.
+    - **Ensure MongoDB is running on your local machine or use a MongoDB Atlas URI in the .env file.**
 
 5. **Start the application:**
-    ```sh
-    Backend:
-
-    cd Back-end
-    npm run dev
+    - **Start The Backend:-**
+    ```markdown
+    \blogging-platform\backend>
     ```
     ```sh
+    npm run dev
+    ```
+    **OR**
+
+    ```sh
+    npm start
+    ```
+    ### When your backend server starts properly without any error, the terminal will show you this message
+
+    ```markdown
     Server is start running on http://localhost:5001/
     
     MongoDB is Connected to Database:
           Database Host: mongodb://localhost:27017/
           Database Name: YOUR_DB_NAME
     ```
+    - **Start The Front-End :-**
+    ```markdown
+    \blogging-platform\frontend>
+    ```
     ```sh
-    Front-end:
-
-    cd ../frontend
     npm run dev
     ```
 
 # Running the Application
-- Open your browser and navigate to http://localhost:5173 for the frontend.
+- **Open your browser and navigate to http://localhost:5173/ for the frontend.**
 
-- The backend will be running on http://localhost:5001.
+- **The backend will be running on http://localhost:5001/**
