@@ -11,22 +11,6 @@ BloggingApp leverages modern technologies to deliver a seamless blogging experie
 
 Experience a robust platform where managing your content is as straightforward as it is powerful.
 
-## Application Architecture
-
-**Backend (Server-side):**
-- **Controllers:** Execute the core business logic.
-- **Models:** Define and enforce MongoDB data schemas.
-- **Routes:** Handle API endpoints and client requests.
-- **Middleware:** Incorporate custom functionality such as authentication and logging.
-- **Config:** Manage environment variables and configuration settings.
-
-**Frontend (Client-side):**
-- **Components:** Modular and reusable UI elements.
-- **Pages:** Dedicated views for various sections of the application.
-- **Services:** Facilitate API interactions and data fetching.
-- **Styles:** Organized CSS for a modern and responsive design.
-- **Utilities:** Helper functions to streamline common tasks.
-
 
 ## Getting Started
 
@@ -66,12 +50,14 @@ To set up and run this project, you will need the following tools installed on y
 3. **Install dependencies::**
     - **Backend :-**
     - **Navigate to the \blogging-platform\backend>**
+
     ```sh
     cd backend
     npm install
     ```
     - **Frontend :-**
     - **Navigate to the \blogging-platform\frontend>**
+
     ```sh
     cd..
     cd frontend
@@ -84,6 +70,7 @@ To set up and run this project, you will need the following tools installed on y
 5. **Start the application:**
     - **Start The Backend:-**
     - **Navigate to the \blogging-platform\backend>**
+
     ```sh
     npm run dev
     ```
@@ -103,6 +90,7 @@ To set up and run this project, you will need the following tools installed on y
     ```
     - **Start The Front-End :-**
     - **Navigate to the \blogging-platform\frontend>**
+
     ```sh
     npm run dev
     ```
