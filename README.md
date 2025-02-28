@@ -39,58 +39,51 @@ To set up and run this project, you will need the following tools installed on y
 - **MongoDB**: NoSQL database for storing data.
 - **VS Code** or any other text editor of your choice.
 
-### Installation
+## Installation
 
-Follow these steps to set up the project on your local machine:
+- **Follow these steps to set up the project on your local machine:-**
 
 1. **Clone the repository:**
 
     ```sh
     git clone https://github.com/kailash-parihar/blogging-platform.git
     ```
-    ```sh    
+    ```sh        
     cd blogging-platform
     ```
    
 2. **Set up environment variables:**
-- Create a .env file in the backend directory and add the following:
+- **Create a .env file in the backend directory and add the following:-**
+
     ```sh
-    MONGO_URI=your_mongodb_uri
-    ```
-    ```sh
+    MONGO_URI= YOUR_MONGODB_URI
+
     PORT=5001
-    ```
-    ```sh
-    JWT_SECRET=your_secret_key
+
+    JWT_SECRET= YOUR_SECRET_KEY
     ```
 
 3. **Install dependencies::**
     - **Backend :-**
-    ```markdown
-    \blogging-platform\backend>
-    ```
+    - **Navigate to the \blogging-platform\backend>**
     ```sh
     cd backend
     npm install
     ```
     - **Frontend :-**
-    ```markdown
-    \blogging-platform\frontend>
-    ```
+    - **Navigate to the \blogging-platform\frontend>**
     ```sh
     cd..
     cd frontend
     npm install
     ```
 
-4. **Run MongoDB:**
+4. **MongoDB:**
     - **Ensure MongoDB is running on your local machine or use a MongoDB Atlas URI in the .env file.**
 
 5. **Start the application:**
     - **Start The Backend:-**
-    ```markdown
-    \blogging-platform\backend>
-    ```
+    - **Navigate to the \blogging-platform\backend>**
     ```sh
     npm run dev
     ```
@@ -105,13 +98,11 @@ Follow these steps to set up the project on your local machine:
     Server is start running on http://localhost:5001/
     
     MongoDB is Connected to Database:
-          Database Host: mongodb://localhost:27017/
+          Database Host: YOUR_MONGO_DB_URL STRING
           Database Name: YOUR_DB_NAME
     ```
     - **Start The Front-End :-**
-    ```markdown
-    \blogging-platform\frontend>
-    ```
+    - **Navigate to the \blogging-platform\frontend>**
     ```sh
     npm run dev
     ```
