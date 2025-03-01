@@ -6,14 +6,14 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 
 const { dbConfig } = require("./src/configurations/db.config");
+const { authRouter } = require("./src/routers/auth.routes");
 
 app.get("/", (req, res) => {
-  res.send(`
-    <div style="text-align: center;">
-      <h1>Welcome, Kailash! This Is Backend For Blogging Application</h1>
-    </div>
-  `);
+  res.send(`<div style="text-align: center;"><h1>Welcome, Kailash</h1></div>`);
 });
+
+app.use(express.json());
+app.use("/api/v1/auth", authRouter);
 
 app.listen(port, () => {
   dbConfig();

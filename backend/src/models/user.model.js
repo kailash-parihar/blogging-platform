@@ -60,7 +60,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: {
-        values: ["Admin", "User", "Author"],
+        values: ["SuperAdmin", "Admin", "User", "Author"],
         message: "{VALUE} is not a valid role.",
       },
       default: "User",
@@ -78,7 +78,6 @@ const userSchema = new mongoose.Schema(
     dob: {
       type: Date,
       required: [true, "Date of birth is required."],
-      max: [Date.now(), "Date of birth cannot be in the future."],
     },
 
     // * Articles written by the user. Array of ObjectIDs referencing the "Article" collection.
