@@ -3,6 +3,7 @@
  * Defines the structure and validation for user documents in MongoDB.
  */
 const mongoose = require("mongoose");
+const hashPasswordHook = require("../hooks/hashPassword.hook");
 
 const userSchema = new mongoose.Schema(
   {
@@ -132,6 +133,8 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+hashPasswordHook(userSchema);
 
 const User = mongoose.model("User", userSchema);
 module.exports = { User };

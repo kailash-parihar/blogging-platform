@@ -35,12 +35,12 @@ const loginUser = async (req, res) => {
 
       if (!isPasswordMatch) {
         return res.status(401).json({ message: "Invalid Password" });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: `Welcome back, ${user.firstName} ${user.lastName}! You have logged in successfully.`,
+        });
       }
-
-      res.status(200).json({
-        status: "success",
-        message: `Welcome back, ${user.firstName} ${user.lastName}! You have logged in successfully.`,
-      });
     }
   } catch (error) {
     res.status(500).json({
