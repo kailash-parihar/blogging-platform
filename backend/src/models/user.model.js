@@ -1,6 +1,8 @@
+/**
+ * User Schema for the Blogging Application.
+ * Defines the structure and validation for user documents in MongoDB.
+ */
 const mongoose = require("mongoose");
-
-// * * User Schema for the Blogging Application
 
 const userSchema = new mongoose.Schema(
   {
@@ -26,8 +28,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
 
-    // ! Email address of the user. must match the provided regex pattern for a valid email.
-
+    // Email address must match a valid email pattern.
     email: {
       type: String,
       lowercase: true,
@@ -52,10 +53,11 @@ const userSchema = new mongoose.Schema(
       minlength: [3, "Username must be at least 3 characters long."],
       trim: true,
     },
+
     /**
-     * * Role assigned to the user.
-     * * Acceptable values: "Admin", "User", or "Author". Defaults to "User".
-     * ! If a value outside the enum is provided, it returns an error with {VALUE} replaced by the input.
+     * Role assigned to the user.
+     * Acceptable values: "SuperAdmin", "Admin", "User", "Author".
+     * Defaults to "User". Invalid values will produce an error.
      */
     role: {
       type: String,
@@ -65,22 +67,24 @@ const userSchema = new mongoose.Schema(
       },
       default: "User",
     },
+
     isSubscribed: {
       type: Boolean,
       default: false,
     },
 
-    // Avatar URL or image path for the user. defaults to an empty string if not provided.
+    // Avatar URL or image path; defaults to an empty string.
     avatar: {
       type: String,
       default: "",
     },
+
     dob: {
       type: Date,
       required: [true, "Date of birth is required."],
     },
 
-    // * Articles written by the user. Array of ObjectIDs referencing the "Article" collection.
+    // References to articles written by the user.
     article: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -89,11 +93,11 @@ const userSchema = new mongoose.Schema(
     ],
 
     phoneNumber: {
-      required: [true, "Phone number is required."],
       type: Number,
+      required: [true, "Phone number is required."],
     },
 
-    // Communication address details for the user.
+    // Communication address details.
     communicationAddress: {
       address_1: {
         type: String,
