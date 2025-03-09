@@ -7,12 +7,12 @@ async function dbConfig() {
       .then(() => {
         console.log(`\nMongoDB is Connected to Database:
           Database Host: ${process.env.MONGO_DB_URI}
-          Database Name: ${process.env.DB_NAME}`);
+          Database Name: ${process.env.DB_NAME}\n`);
       });
   } catch (error) {
     console.log(`\nMongoDB Connection Error :-
       Error Name : ${error.name}
-      Error Message : ${error.message}`);
+      Error Message : ${error.message}\n`);
   }
 }
 
